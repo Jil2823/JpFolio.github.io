@@ -197,7 +197,7 @@
                     </div>
                     <div id="formbox-bg">
                         <div id="formbox">
-                            <form onsubmit="sendEmail(); reset(); return false;">
+                            <form>
                                 <div class="fillspace">
                                     <input type="text" name="name" id="name" placeholder="Full name">
                                 </div>
@@ -239,7 +239,8 @@
                                 class="fab fa-instagram ov-visible"></i></a></li>
                     <li class="ov-visible"><a href="https://www.linkedin.com/in/jil-prajapati-18a01123a"
                             target="_blank"><i class="fab fa-linkedin-in ov-visible"></i></a></li>
-                    <!-- <li class="ov-visible"><a href="https://twitter.co" target="_blank"><i class="fab fa-twitter ov-visible"></i></a></li> -->
+                    <li class="ov-visible"><a href="https://join.skype.com/invite/w68Eo0KcLwr0" target="_blank"> 
+                            <i class="fab fa-skype ov-visible"></i></a></li> 
                     <li class="ov-visible"><a href="https://github.com/jil2823" target="_blank"><i
                                 class="fab fa-github ov-visible"></i></a></li>
                 </ul>
@@ -252,27 +253,7 @@
         </footer>
     </main>
 
-    <!-- contect me in email link -->
-    <script src=" https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail() {
-            Email.send({
-                secureToken : " 4a93274e-1ac2-490c-b99e-32be64373a74",
-               
-                To: 'jilprajapati45@gmail.com',
-                From: document.getElementById("email").value,
-                Subject: "JpFolio",
-                Body: "name " + document.getElementById("name").value < br >
-
-                    // "email " + document.getElementById("email").value < br >
-                    "number " + document.getElementById("number").value < br >
-                    "subject " + document.getElementById("subject").value < br >
-            }).then(
-                        message => alert("message sent succesfuly")
-                    );
-        }
-
-    </script>
+    
 
 
 

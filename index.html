@@ -198,7 +198,7 @@
                     </div>
                     <div id="formbox-bg">
                         <div id="formbox">
-                            <form action="https://formspree.io/f/mbjwvdpb"  method="POST" >
+                            <form  name="submit-to-google-sheet"  onsubmit="return confirm('Your Response Has Been Recorded Successfully');" >
                                 <div class="fillspace">
                                     <input type="text" name="name" id="name" placeholder="Full name">
                                 </div>
@@ -253,8 +253,18 @@
             </div>
         </footer>
     </main>
+    <!-- contect list google sheet  -->
+     <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx_51_OqJdIZbJQIbRkhEo2-Fa1K0QFZEJm0Ce2bAE9-YCLTbNik2UL00SZlyzt32DOCQ/exec'
+        const form = document.forms['submit-to-google-sheet']
 
-    
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => form.reset())
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
 
 
 

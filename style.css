@@ -57,10 +57,14 @@ nav
     padding-left: 0;
 }
 
+
 #nav-menu ul li
 {
     margin-left: 25px;
     margin-right: 25px;
+    
+    display: inline-block;
+    list-style: none;
 }
 
 #nav-menu ul li a
@@ -68,7 +72,24 @@ nav
     text-decoration: none;
     color: white;
     font-size: 30px;
+    position: relative;
 }
+#nav-menu ul li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #8102f8;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.5s;
+
+}
+#nav-menu ul li a:hover::after{
+
+    width: 100%;
+}
+
 
 #logo
 {
